@@ -1,0 +1,11 @@
+{
+  "name": "unibooks-poster",
+  "private": true,
+  "scripts": {
+    "build": "bash build.sh"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "latest",
+    "qrcode": "latest"
+  }
+}

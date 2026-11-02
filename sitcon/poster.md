@@ -5,7 +5,7 @@ paginate: false
 html: true
 ---
 <div class="head">
-  <div class="brand"><img src="assets/logo.png" alt=""><img class="wordmark" src="assets/wordmark.svg" alt="UniBooks"></div>
+  <div class="brand"><img src="../assets/logo.png" alt=""><img class="wordmark" src="../assets/wordmark.svg" alt="UniBooks"></div>
   <h1 class="title-zh">讓閒置課本<br>找到<em>下一位同學</em></h1>
   <div class="title-en">UniBooks: Campus Used Textbooks,<br>Matched by ISBN and Handed Over in Person</div>
   <div class="presenter">周恭煥</div>
@@ -41,8 +41,8 @@ html: true
 <div class="sec">
   <h2>實際畫面 Demo</h2>
   <div class="row c2" style="align-items:start;">
-    <figure><img src="assets/home.png" alt=""><figcaption>圖 1　首頁：書名、ISBN、課程、教授都能搜</figcaption></figure>
-    <figure class="fig-bottom"><img src="assets/book.png" alt=""><figcaption>圖 2　書籍頁：以 ISBN 為單位；暫時沒人上架時可「登記求書」，有人上架就通知</figcaption></figure>
+    <figure><img src="../assets/home.png" alt=""><figcaption>圖 1　首頁：書名、ISBN、課程、教授都能搜</figcaption></figure>
+    <figure class="fig-bottom"><img src="../assets/book.png" alt=""><figcaption>圖 2　書籍頁：以 ISBN 為單位；暫時沒人上架時可「登記求書」，有人上架就通知</figcaption></figure>
   </div>
   <div class="steps">
     <div class="step"><div class="n">1</div><b>掃書背條碼</b><span>手機鏡頭對準 ISBN</span></div>
@@ -87,7 +87,7 @@ html: true
 </div>
 
 <div class="cta">
-  <div class="qr"><img src="assets/qr.svg" alt="unibooks.app QR code"></div>
+  <div class="qr"><img src="../assets/qr.svg" alt="unibooks.app QR code"></div>
   <div class="txt">
     <b>掃描 QR code，開始使用 unibooks.app</b>
     <ol class="go">

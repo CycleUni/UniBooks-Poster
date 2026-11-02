@@ -1,0 +1,91 @@
+/* @theme poster */
+@import 'default';
+/* A1 直式：寬 594 mm × 高 841 mm（致理校慶）。邊界 22 mm。現場路人站 1–2 公尺看，字級以遠看為準。 */
+section {
+  width: 2245px;
+  height: 3179px;
+  box-sizing: border-box;
+  padding: 22mm;
+  margin: 0;
+  background: #F5F3EC;
+  color: #1F2933;
+  font-family: "PingFang TC", "Noto Sans TC", "Heiti TC", sans-serif;
+  font-size: 24pt;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 7mm;
+  justify-content: space-between;
+  --accent: #1E5C46;
+  --accent-ink: #14402F;
+  --accent-soft: #E3EEE7;
+  --warm: #C8763F;
+  --warm-soft: #FBF0E4;
+  --gold: #F9C873;
+  --ink-soft: #4A555F;
+  --line: #D9D4CB;
+}
+section * { box-sizing: border-box; }
+section > * { flex: none; }
+h1, h2, h3, p, ul, ol, figure { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+
+/* ── 標題區 ── */
+.head { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 4mm; }
+.brand { display: flex; align-items: center; gap: 12mm; }
+.brand img { width: 48mm; height: 48mm; }
+.brand .wordmark { width: auto; height: 34mm; }
+.title-zh { font-family: "Noto Serif TC", "Songti TC", serif; font-size: 72pt; line-height: 1.18; font-weight: 800; }
+.title-zh em { font-style: normal; color: var(--accent); }
+.tagline { font-size: 32pt; font-weight: 600; color: var(--ink-soft); }
+.tagline b { color: var(--warm); }
+
+/* ── 通用區塊 ── */
+.sec { background: #fff; border: 1.2mm solid var(--line); border-radius: 7mm; padding: 8mm 11mm; }
+.sec > h2 { font-family: "Noto Serif TC", "Songti TC", serif; font-size: 40pt; line-height: 1.2; color: var(--accent); margin-bottom: 5mm; display: flex; align-items: center; gap: 5mm; }
+.sec > h2::before { content: ""; width: 4.5mm; height: 14mm; background: var(--warm); border-radius: 2mm; flex: none; }
+.row { display: grid; gap: 7mm; }
+.c2 { grid-template-columns: 1fr 1fr; }
+
+/* 學期末提問橫幅 */
+.hook { background: var(--accent); color: #F2F7F4; border-radius: 7mm; padding: 6mm 11mm; text-align: center; }
+.hook .big { font-family: "Noto Serif TC", "Songti TC", serif; font-size: 40pt; font-weight: 800; line-height: 1.3; }
+.hook .big span { color: var(--gold); }
+.hook .sub { font-size: 28pt; margin-top: 3mm; opacity: .92; }
+
+/* 問題 / 解法清單 */
+.items li { display: grid; grid-template-columns: 15mm 1fr; gap: 5mm; margin-bottom: 5mm; align-items: start; }
+.items li:last-child { margin-bottom: 0; }
+.num { width: 15mm; height: 15mm; border-radius: 50%; background: var(--warm); color: #fff; font-weight: 800; font-size: 26pt; display: flex; align-items: center; justify-content: center; }
+.good .num { background: var(--accent); }
+.items b { display: block; font-size: 30pt; line-height: 1.3; }
+.items span { font-size: 24pt; color: var(--ink-soft); line-height: 1.4; display: block; }
+
+/* 圖與圖說（圖說在圖下方） */
+figure { text-align: center; }
+figure img { width: 100%; aspect-ratio: 3852 / 1300; height: auto; object-fit: cover; object-position: top; border: .8mm solid var(--line); border-radius: 4mm; display: block; }
+figcaption { font-size: 22pt; color: var(--ink-soft); margin-top: 3mm; }
+.shots { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; align-items: start; }
+
+/* 三步驟 */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm; }
+.step { background: var(--accent-soft); border-radius: 6mm; padding: 6mm 4mm; text-align: center; }
+.step .n { font-size: 56pt; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 2mm; }
+.step b { display: block; font-size: 30pt; }
+.step span { font-size: 23pt; color: var(--ink-soft); display: block; line-height: 1.35; }
+
+/* 三個賣點 */
+.perks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm; }
+.perk { background: var(--warm-soft); border: 1mm solid var(--warm); border-radius: 6mm; padding: 5mm 4mm; text-align: center; }
+.perk .big { font-family: "Noto Serif TC", "Songti TC", serif; font-size: 44pt; font-weight: 800; color: var(--warm); line-height: 1.15; }
+.perk span { font-size: 23pt; color: var(--ink-soft); display: block; margin-top: 1mm; line-height: 1.35; }
+
+/* 開始使用橫幅 */
+.cta { background: var(--accent); color: #F2F7F4; border-radius: 7mm; padding: 9mm 11mm; display: grid; grid-template-columns: 120mm 1fr; column-gap: 12mm; align-items: center; }
+.cta .qr { background: #fff; padding: 5mm; border-radius: 5mm; width: 120mm; height: 120mm; }
+.cta .qr img { width: 100%; height: 100%; display: block; }
+.cta .txt { display: flex; flex-direction: column; gap: 5mm; }
+.cta b { font-size: 42pt; line-height: 1.25; color: var(--gold); }
+.go li { display: grid; grid-template-columns: 13mm 1fr; column-gap: 5mm; align-items: center; margin-bottom: 3mm; font-size: 26pt; line-height: 1.35; }
+.go i { width: 13mm; height: 13mm; border-radius: 50%; background: var(--gold); color: var(--accent-ink); font-style: normal; font-weight: 800; font-size: 22pt; display: flex; align-items: center; justify-content: center; }
+.cta .by { font-size: 22pt; opacity: .85; }

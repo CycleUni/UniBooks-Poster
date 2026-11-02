@@ -1,15 +1,19 @@
 #!/usr/bin/env bash
-# 輸出 dist/UniBooks-poster.pdf（A0 直式 841 × 1189 mm，符合 SITCON 規格，也可直接印來擺攤）。
-# 用法：bash build.sh
+# 用法：bash build.sh <sitcon|campus-fest>
+#   sitcon       → dist/UniBooks-poster-sitcon.pdf        A0 直式 841 × 1189 mm（SITCON 規格）
+#   campus-fest  → dist/UniBooks-poster-campus-fest.pdf   A1 直式 594 × 841 mm（致理校慶）
+# 兩張海報各自放在同名資料夾（poster.md + poster.css），共用 assets/。
 #
 # 注意：marp-cli 偶爾在輸出檔寫完後不結束程序（已在 Chrome 156 / marp-cli 4.5 遇到），
 # 所以這裡以「輸出檔寫完且大小穩定」判定完成，再結束該程序。
 set -uo pipefail
 cd "$(dirname "$0")"
+name="${1:-}"
+if [ ! -f "$name/poster.md" ]; then echo "用法：bash build.sh <sitcon|campus-fest>" >&2; exit 2; fi
 mkdir -p dist
-out="dist/UniBooks-poster.pdf"
+out="dist/UniBooks-poster-$name.pdf"
 rm -f "$out"
-node node_modules/.bin/marp poster.md --theme poster.css \
+node node_modules/.bin/marp "$name/poster.md" --theme "$name/poster.css" \
   --allow-local-files --html --pdf -o "$out" >/dev/null 2>&1 &
 pid=$! last=-1 same=0 t=0
 while [ $t -lt 150 ]; do

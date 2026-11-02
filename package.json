@@ -2,7 +2,9 @@
   "name": "unibooks-poster",
   "private": true,
   "scripts": {
-    "build": "bash build.sh"
+    "build": "bash build.sh sitcon && bash build.sh campus-fest",
+    "build:sitcon": "bash build.sh sitcon",
+    "build:campus-fest": "bash build.sh campus-fest"
   },
   "devDependencies": {
     "@marp-team/marp-cli": "latest",
